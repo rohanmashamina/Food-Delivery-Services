@@ -8,5 +8,5 @@ the root directory of this project should stick to the name ffc. Because most of
 
 It's the atomic light weight version. 
 
-dedicated to college students who needs this ;)
+dedicated to college students who needs this 
 
