@@ -1,44 +1,127 @@
-Food Delivery Services
-A PHP/MySQL web app for ordering food online, supporting customers, delivery boys, restaurant managers, and admin.
+# Food Delivery Services 🍽️
 
-Features
-User registration/login
-Restaurant and food management
-Cart, order, and payment (online/COD)
-Order tracking
-Admin dashboard
-Technologies Used
-PHP (backend)
-MySQL (database, see ffc.sql)
-HTML, CSS (Bootstrap, FontAwesome)
-JavaScript (jQuery)
-Windows PowerShell (for local development)
-Setup Instructions
-Clone the repository
-Download or clone the project to your local machine.
+A PHP/MySQL-based web application for seamless food ordering and delivery, supporting customers, delivery personnel, restaurant managers, and administrators.
 
-Database Setup
+## 🚀 Features
 
-Import ffc.sql into your MySQL server to create the required tables.
-Update database credentials in dbh.inc.php as needed.
-Configure Web Server
+- ✅ User Registration & Login (Customers, Delivery Boys, Restaurant Managers, Admin)
+- 🍕 Restaurant and Food Menu Management
+- 🛒 Cart System & Order Placement
+- 💳 Payment Options (Cash on Delivery / Online)
+- 🔄 Order Tracking and Status Updates
+- 📦 Delivery Management Panel
+- 📊 Admin Dashboard for Full Platform Control
 
-Place the project folder in your web server's root directory (e.g., htdocs for XAMPP).
-Ensure PHP and MySQL are installed and running.
-File Permissions
+## 🛠️ Technologies Used
 
-Make sure the uploads directory is writable for image uploads.
-Access the Application
+- **Frontend**: HTML, CSS (Bootstrap, FontAwesome), JavaScript (jQuery)
+- **Backend**: PHP
+- **Database**: MySQL (via `ffc.sql`)
+- **Development Tools**: Windows PowerShell (for local development)
 
-Open index.php in your browser to start using the platform.
-Usage
-Customers: Register, browse restaurants and food, add items to cart, place orders, track orders, and manage profile.
-Delivery Boys: Login, view assigned orders, update delivery status.
-Restaurant Managers: Manage food items, view orders, update order status.
-Admin: Manage restaurants, delivery boys, and oversee platform operations.
-Contributing
-Fork the repository
-Create your feature branch (git checkout -b feature/YourFeature)
-Commit your changes
-Push to the branch (git push origin feature/YourFeature)
-Open a pull request
+## 📂 Project Structure
+
+```
+
+root/
+├── admin/
+├── customer/
+├── delivery/
+├── manager/
+├── includes/
+├── uploads/
+├── dbh.inc.php
+├── index.php
+└── ffc.sql
+
+````
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/food-delivery-services.git
+````
+
+Or download the ZIP and extract it into your local machine.
+
+### 2. Database Setup
+
+* Import the `ffc.sql` file into your MySQL server using phpMyAdmin or CLI:
+
+```sql
+CREATE DATABASE food_delivery;
+USE food_delivery;
+-- Then import the SQL file
+```
+
+* Update the **database credentials** in `includes/dbh.inc.php`:
+
+```php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "food_delivery";
+```
+
+### 3. Configure Web Server
+
+* Move the project folder to the web server's root directory (e.g., `htdocs/` in XAMPP).
+* Ensure PHP and MySQL services are **running**.
+
+### 4. Set File Permissions
+
+* Ensure the `/uploads` directory has **write permissions** to allow image uploads.
+
+### 5. Access the Application
+
+Open your browser and go to:
+
+```
+http://localhost/food-delivery-services/index.php
+```
+
+## 👥 User Roles & Usage
+
+### 👤 Customers
+
+* Register/Login
+* Browse restaurants & food items
+* Add items to cart
+* Place orders and track them
+* Manage personal profile
+
+### 🚚 Delivery Boys
+
+* Login to dashboard
+* View assigned orders
+* Update delivery statuses (picked up, delivered)
+
+### 🍽️ Restaurant Managers
+
+* Manage menu items (add/edit/delete)
+* View and update order statuses
+* Monitor restaurant-specific performance
+
+### 🛠️ Admin
+
+* Manage restaurants, users, delivery boys
+* Oversee all platform activities
+* Access insights and reports
+
+## 🤝 Contributing
+
+We welcome contributions!
+
+1. **Fork** this repository
+2. Create your branch:
+   `git checkout -b feature/YourFeature`
+3. Commit your changes:
+   `git commit -m "Add some feature"`
+4. Push to the branch:
+   `git push origin feature/YourFeature`
+5. Open a **Pull Request**
+
+
+
